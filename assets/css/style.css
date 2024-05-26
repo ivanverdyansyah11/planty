@@ -1,0 +1,233 @@
+/* FONT FACE */
+@font-face {
+    font-family: 'urbanist-regular';
+    src: url('../font/Urbanist-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'urbanist-medium';
+    src: url('../font/Urbanist-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'urbanist-semibold';
+    src: url('../font/Urbanist-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'urbanist-bold';
+    src: url('../font/Urbanist-Bold.ttf');
+}
+/* END FONT FACE */
+
+
+/* ROOT VARIABLE */
+:root {
+    --primary-color: 29, 143, 40;
+    --dark-color: 21, 101, 29;
+    --light-color: 255, 255, 255;
+    --regular-font: 'urbanist-regular', Arial, Helvetica, sans-serif;
+    --medium-font: 'urbanist-medium', Arial, Helvetica, sans-serif;
+    --semibold-font: 'urbanist-semibold', Arial, Helvetica, sans-serif;
+    --bold-font: 'urbanist-bold', Arial, Helvetica, sans-serif;
+}
+/* END ROOT VARIABLE */
+
+
+/* BODY STYLE */
+body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: var(--medium-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+}
+/* END BODY STYLE */
+
+
+/* COMPONENT */
+.button-reverse {
+    padding: 16px 18px;
+    background-color: rgba(var(--light-color), 1);
+    border-radius: 2px;
+    color: rgba(var(--primary-color), 1);
+    font-size: 0.913rem;
+    text-decoration: none;
+}
+/* END COMPONENT */
+
+
+/* NAVIGATION */
+nav.navbar {
+    background: linear-gradient(90deg, rgba(var(--primary-color), 1) 0%, rgba(var(--dark-color), 1) 100%);
+}
+
+nav.navbar .nav-link {
+    font-size: 1rem;
+    color: rgba(var(--light-color), 1);
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link.active {
+    text-decoration: underline;
+}
+/* END NAVIGATION */
+
+
+/* SECTION HERO */
+section.hero {
+    background: linear-gradient(90deg, rgba(var(--primary-color), 1) 0%, rgba(var(--dark-color), 1) 100%);
+    height: 88vh;
+    overflow: hidden;
+}
+
+.banner-hero {
+    position: absolute;
+    right: -300px;
+    bottom: -100px;
+    width: 1000px;
+    height: auto;
+}
+
+.headline {
+    font-size: 4rem;
+    font-family: var(--bold-font);
+    color: rgba(var(--light-color), 1);
+}
+
+section.hero .paragraph {
+    font-size: 1rem;
+    margin-top: 24px;
+    margin-bottom: 52px;
+    line-height: 150%;
+    color: rgba(var(--light-color), 1);
+}
+/* END SECTION HERO */
+
+
+/* SECTION ABOUT */
+section.about .headline {
+    color: rgba(var(--dark-color), 1);
+    margin-top: 100px;
+    text-align: center;
+    font-family: var(--bold-font);
+    font-size: 3rem;
+}
+
+section.about .title {
+    color: rgba(var(--dark-color), 1);
+    font-family: var(--bold-font);
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+section.about li {
+    font-size: 1.5rem;
+    color: rgba(var(--dark-color), 1);
+    font-family: var(--semibold-font);
+}
+/* END SECTION ABOUT */
+
+
+/* SECTION SERVICE */
+section.service .headline {
+    background: linear-gradient(90deg, rgba(var(--primary-color), 1) 0%, rgba(var(--dark-color), 1) 100%);
+    padding: 12px 0;    
+}
+
+section.service .paragraph {
+    color: rgba(var(--dark-color), 1);
+    font-size: 1.5rem;
+    font-family: var(--semibold-font);
+}
+
+section.service .card-service {
+    padding: 24px;
+    background-color: rgba(var(--dark-color), 1);
+    border-radius: 12px;
+}
+
+section.service .card-service img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+section.service .card-service .title {
+    font-size: 1.25rem;
+    color: rgba(var(--light-color), 1);
+    font-family: var(--semibold-font);
+    text-align: center;
+}
+/* END SECTION SERVICE */
+
+
+/* FOOTER */
+footer.footer {
+    background: linear-gradient(90deg, rgba(var(--primary-color), 1) 0%, rgba(var(--dark-color), 1) 100%);
+    padding: 100px 0;
+    margin-top: 120px;
+}
+
+footer.footer h3 {
+    font-size: 1.75rem;
+    color: rgba(var(--light-color), 1);
+    font-family: var(--bold-font);
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+footer.footer a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgba(var(--light-color), 1);
+    width: fit-content;
+}
+
+footer.footer a:hover {
+    text-decoration: underline;
+}
+/* END FOOTER */
+
+
+/* RESPONSIVE */
+@media (max-width: 1199.98px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+
+    footer .headline {
+        font-size: 2.5rem;
+    }
+
+    section.hero .paragraph {
+        margin-bottom: 42px;
+    }
+
+    .banner-hero {
+        width: 840px;
+    }
+
+    section.about li {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .headline {
+        font-size: 3rem;
+    }
+}
+/* END RESPONSIVE */
